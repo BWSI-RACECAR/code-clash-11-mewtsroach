@@ -1,0 +1,104 @@
+{
+  "tests": [
+    {
+      "name": "Test 1",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "1 2 3 4 5 0",
+      "output": "4",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 2",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "7 5 3 2 1",
+      "output": "0",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 3",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "1 3 3 5 4 0 3 8 5 5",
+      "output": "12",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 4",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "0 8 5 7 3 2 2 9 0",
+      "output": "15",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 5",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "0 0 0 1 1 2 3 5 3 6 3",
+      "output": "8",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 6",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "9 15 16 2 17 28 39 100",
+      "output": "105",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 7",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "9 5 4 3 4 2 0",
+      "output": "1",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 8",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "1 2 3 4 5 7 2 3 4 5 6 3",
+      "output": "10",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 9",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "1 6 2 5 8 4 6 8 9 11",
+      "output": "14",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "Test 10",
+      "setup": "",
+      "run": "python3 stonks.py",
+      "input": "5",
+      "output": "0",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+  ]
+}
