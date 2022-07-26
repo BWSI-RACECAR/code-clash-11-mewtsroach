@@ -45,14 +45,17 @@ class Solution:
         prev_min_in = 0
         max_in = 0
         prev_max_in = 0
-        for i in range(0, len(prices) - 1):
-            if prices[min_in] < prices[i]:
+        for i in range(0, len(prices)):
+            if prices[min_in] > prices[i]:
                 prev_min_in = min_in
                 min_in = i
-        for i in range(len(prices) - 1, 0):
-            if prices[max_in] > prices[i]:
-                prev_min_in = max_in
+        prices_back = list(reversed(prices))
+        for i in range(0, len(prices_back)):
+            if prices_back[max_in] < prices_back[i]:
+                prev_max_in = max_in
                 max_in = i
+        prev_max_in = len(prices) - 1 - prev_max_in
+        max_in = len(prices) - 1 - max_in
         profit = 0
         if min_in < max_in:
             profit = (prices[max_in] - prices[min_in])
@@ -63,10 +66,10 @@ class Solution:
             elif prev_max_in > min_in and max_in > prev_min_in:
                 if profit < (prices[prev_max_in] - prices[min_in] + prices[max_in] - prices[prev_min_in]):
                     profit = (prices[prev_max_in] - prices[min_in] + prices[max_in] - prices[prev_min_in])
-        elif prev_min_in < max_in and (prices[max_in] - prices[prev_min_in]):
-            profit = prices[max_in] - prices[min_in]
+        elif prev_min_in < max_in:
+            profit = prices[max_in] - prices[prev_min_in]
         elif prev_min_in < prev_max_in:
-            profit = prices[prev_max_in] - prices[min_in]
+            profit = prices[prev_max_in] - prices[prev_min_in]
         """min_price_1 = 100000
         profit_1 = []
         max_profit_1 = 0
