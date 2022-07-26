@@ -49,6 +49,7 @@ class Solution:
             if prices[min_in] < prices[i]:
                 prev_min_in = min_in
                 min_in = i
+        for i in range(len(prices) - 1, 0):
             if prices[max_in] > prices[i]:
                 prev_min_in = max_in
                 max_in = i
@@ -66,7 +67,24 @@ class Solution:
             profit = prices[max_in] - prices[min_in]
         elif prev_min_in < prev_max_in:
             profit = prices[prev_max_in] - prices[min_in]
-
+        """min_price_1 = 100000
+        profit_1 = []
+        max_profit_1 = 0
+        for x in prices:
+            if min_price_1 > x:
+                min_price_1 = x
+            else:
+                max_profit_1 = max(max_profit_1, x - min_price_1)
+            profit_1.append(max_profit_1)
+        max_price_1 = 0
+        profit_1 = [0]*
+        max_profit_1 = 0
+        for x in prices:
+            if min_price_1 > x:
+                min_price_1 = x
+            else:
+                max_profit_1 = max(max_profit_1, x - min_price_1)
+            profit_1.append(max_profit_1)"""
         return profit
 
 def main():
